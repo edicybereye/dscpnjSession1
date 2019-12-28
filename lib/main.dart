@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var cekWarna = false;
   String number = "0";
   @override
   Widget build(BuildContext context) {
@@ -39,14 +40,33 @@ class _MyAppState extends State<MyApp> {
             ),
             Text(
               "DSC PNJ",
-              style: TextStyle(fontSize: 18),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 30,
+              ),
             ),
             SizedBox(
               height: 8,
             ),
             Text(
               "Depok, Indonesia",
-              style: TextStyle(fontSize: 18),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 40,
+                fontFamily: "Edi",
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  cekWarna = !cekWarna;
+                });
+              },
+              icon: Icon(
+                Icons.home,
+                size: 40,
+                color: cekWarna ? Colors.red : Colors.black,
+              ),
             )
           ],
         ),
