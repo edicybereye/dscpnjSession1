@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'custom.dart';
+import 'layout.dart';
 
 void main() => runApp(MaterialApp(
-      home: MyApp(),
+      home: Layouting(),
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
