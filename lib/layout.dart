@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 class Layouting extends StatefulWidget {
@@ -6,6 +7,20 @@ class Layouting extends StatefulWidget {
 }
 
 class _LayoutingState extends State<Layouting> {
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  String fcmToken;
+
+  getToken() async {
+    fcmToken = await _firebaseMessaging.getToken();
+    print(fcmToken);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getToken();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
