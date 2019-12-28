@@ -12,37 +12,60 @@ class _LayoutingState extends State<Layouting> {
       appBar: AppBar(),
       body: Container(
           child: Stack(
-            children: <Widget>[
-              Container(
-                color: Colors.green,
+        children: <Widget>[
+          Container(
+            color: Colors.green,
+          ),
+          Container(
+            height: 150,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                  Colors.purple,
+                  Colors.pink,
+                  Colors.red,
+                ])),
+          ),
+          Positioned(
+            top: 100,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image.asset(
+                  "assets/img/gambar.gif",
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 20),
-                height: 100,
-                color: Colors.red,
-              )
-            ],
+            ),
           )
-          
-      //     Row(
-      //   children: <Widget>[
-      //     Expanded(
-      //       child: Container(
-      //         color: Colors.red,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         color: Colors.green,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         color: Colors.yellow,
-      //       ),
-      //     ),
-      //   ],
-      // )
+        ],
+      )
+
+          //     Row(
+          //   children: <Widget>[
+          //     Expanded(
+          //       child: Container(
+          //         color: Colors.red,
+          //       ),
+          //     ),
+          //     Expanded(
+          //       child: Container(
+          //         color: Colors.green,
+          //       ),
+          //     ),
+          //     Expanded(
+          //       child: Container(
+          //         color: Colors.yellow,
+          //       ),
+          //     ),
+          //   ],
+          // )
           // FittedBox Widget Responsive Widget
           //  FittedBox(
           //   child:
