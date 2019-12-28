@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom.dart';
+
 void main() => runApp(MaterialApp(
       home: MyApp(),
       theme: ThemeData(
@@ -48,13 +50,8 @@ class _MyAppState extends State<MyApp> {
             SizedBox(
               height: 8,
             ),
-            Text(
-              "Depok, Indonesia",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: "Edi",
-              ),
+            TextEdi18(
+              data: "Depok Indonesia",
             ),
             IconButton(
               onPressed: () {
@@ -67,7 +64,26 @@ class _MyAppState extends State<MyApp> {
                 size: 40,
                 color: cekWarna ? Colors.red : Colors.black,
               ),
-            )
+            ),
+            ButtonCustom(
+              onPressed: () {
+                print("Klik");
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonCustom(
+              title: "Tambah Data",
+              warnaDepan: Colors.red,
+              warnaBelakang: Colors.green,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonCustom(
+              title: "Lihat Data",
+            ),
           ],
         ),
       ),
